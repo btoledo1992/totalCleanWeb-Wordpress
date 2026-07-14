@@ -1,0 +1,163 @@
+===========================================
+ TOTAL CLEAN - Tema WordPress a medida
+===========================================
+Servicio de limpieza y mantenimiento profesional - Ushuaia, Tierra del Fuego
+Desarrollado por: btoledo
+
+-------------------------------------------
+1. QUÉ ES ESTO
+-------------------------------------------
+Tema de WordPress 100% custom (no basado en ningún tema/framework de terceros),
+construido desde cero en PHP + CSS + JS vanilla. No usa ningún page builder
+(Elementor, Divi, etc.) - todo el maquetado vive directo en los archivos .php
+del tema.
+
+-------------------------------------------
+2. TECNOLOGÍAS Y HERRAMIENTAS USADAS
+-------------------------------------------
+- WordPress 7.0 (requiere PHP 8.2 o superior, MySQL 8.0 / MariaDB 10.6+)
+- PHP (sin frameworks, usando las funciones nativas de WordPress: get_header(),
+  get_footer(), wp_nav_menu(), do_shortcode(), etc.)
+- CSS puro (sin Sass/Less/Tailwind) - variables CSS nativas (:root) para la
+  paleta de colores y la tipografía
+- JavaScript vanilla (sin jQuery, sin frameworks) - un solo archivo main.js
+  con: carrusel de imágenes, comparador antes/después, acordeón de FAQ,
+  menú hamburguesa mobile, galería de trabajos con scroll horizontal
+- Fuente: Manrope (Google Fonts)
+- Contact Form 7 (plugin) - formulario de contacto real
+- Google reCAPTCHA v3 - protección anti-spam invisible en el formulario
+- Entorno local de desarrollo: XAMPP (Apache + MySQL + PHP)
+- Editor: Visual Studio Code
+- Control de versiones: Git / GitHub
+
+-------------------------------------------
+3. ESTRUCTURA DE ARCHIVOS
+-------------------------------------------
+totalclean/
+├── style.css                  -> Hoja de estilos principal + cabecera del tema
+├── functions.php              -> Registro de menús, carga de estilos/scripts
+├── header.php                 -> Ticker superior, logo, menú, íconos sociales
+├── footer.php                 -> Footer (4 columnas), firma de desarrollo
+├── front-page.php             -> Página de Inicio (se activa sola si en
+│                                  Ajustes > Lectura la portada es "Inicio")
+├── page-servicios.php         -> Página Servicios (se aplica por slug o
+│                                  manualmente desde Atributos de página)
+├── page-quienes-somos.php     -> Página Quienes Somos (ídem)
+├── page-contacto.php          -> Página Contacto (ídem) - acá vive el
+│                                  shortcode de Contact Form 7
+├── page.php                   -> Plantilla genérica de respaldo
+├── index.php                  -> Archivo requerido por WordPress
+├── assets/
+│   ├── js/
+│   │   └── main.js            -> Todo el JS del tema en un solo archivo
+│   └── img/                   -> Todas las imágenes (logo, fotos de
+│                                  servicios, hero, etc.)
+└── DOCUMENTACION.txt          -> Este archivo
+
+-------------------------------------------
+4. CÓMO LEVANTAR EL PROYECTO EN LOCAL (XAMPP)
+-------------------------------------------
+1. Instalar XAMPP (https://www.apachefriends.org) si no está instalado.
+2. Iniciar Apache y MySQL desde el Panel de Control de XAMPP.
+3. Descargar WordPress (https://wordpress.org) y descomprimir el CONTENIDO
+   del zip (no la carpeta "wordpress" en sí) dentro de:
+   C:\xampp\htdocs\totalclean-local\
+4. Ir a http://localhost/phpmyadmin y crear una base de datos nueva
+   (ej: totalclean_db).
+5. Ir a http://localhost/totalclean-local -> se abre el instalador de
+   WordPress. Completar:
+     - Nombre de la base de datos: totalclean_db
+     - Usuario: root
+     - Contraseña: (vacío, por defecto en XAMPP)
+     - Servidor: localhost
+     - Prefijo de tabla: wp_
+6. Copiar la carpeta "totalclean" (este tema) dentro de:
+   C:\xampp\htdocs\totalclean-local\wp-content\themes\
+7. Entrar al wp-admin local -> Apariencia -> Temas -> Activar "Total Clean".
+8. Crear las 4 páginas necesarias (Páginas -> Añadir nueva), con estos
+   títulos EXACTOS para que WordPress genere los slugs correctos:
+     - Inicio
+     - Servicios
+     - Quienes Somos
+     - Contacto
+   No hace falta escribir contenido adentro del editor: todo el diseño
+   viene de los archivos .php del tema automáticamente.
+9. Ajustes -> Lectura -> "La página de inicio muestra" -> Una página
+   estática -> elegir "Inicio".
+10. Ajustes -> Enlaces permanentes -> elegir "Nombre de la entrada" ->
+    Guardar cambios (regenera las URLs bonitas tipo /contacto/).
+11. Apariencia -> Menús -> crear un menú con los 4 links (Inicio, Servicios,
+    Quienes Somos, Contacto) y asignarlo a la ubicación "Menú principal".
+    (Si no se crea un menú, el tema muestra un menú de respaldo automático
+    con esos mismos 4 links, definido en functions.php).
+
+-------------------------------------------
+5. EDITAR EL PROYECTO
+-------------------------------------------
+Abrir en VS Code directamente la carpeta:
+C:\xampp\htdocs\totalclean-local\wp-content\themes\totalclean
+
+Flujo de trabajo: editar archivo -> guardar (Ctrl+S) -> refrescar el
+navegador en http://localhost/totalclean-local -> ver el cambio al toque.
+No hay build ni compilación, PHP/CSS/JS se interpretan directo.
+
+-------------------------------------------
+6. PALETA DE COLORES (definida en :root de style.css)
+-------------------------------------------
+--navy:       #113F67   Azul Institucional (fondo principal, headers, footer)
+--corp:       #34699A   Azul Corporativo (hovers, botones secundarios)
+--ice:        #58A0C8   Azul Claro (acentos, íconos, hovers)
+--mint:       #4FB7B3   Verde Turquesa (checks, detalles de mantenimiento)
+--gold:       #FDF5AA   Amarillo Suave (SOLO como acento en CTAs puntuales)
+--frost:      #E6F1F7   Celeste muy claro (fondos suaves de íconos/badges)
+--white-blue: #F4F6F8   Gris claro (fondo general de página)
+--ink:        #3B3B3B   Gris oscuro (texto principal)
+
+Paleta oficial definida por marketing (ver conversación del proyecto para
+el detalle completo de "uso recomendado" de cada color).
+
+-------------------------------------------
+7. FORMULARIO DE CONTACTO
+-------------------------------------------
+El formulario en /contacto/ usa el plugin Contact Form 7.
+- El shortcode se inserta en page-contacto.php con:
+  <?php echo do_shortcode('[contact-form-7 id="..." title="..."]'); ?>
+- Mail 1: le llega la consulta a comercial@totalclean.com.ar
+- Mail 2 (autorespondedor): le confirma la recepción al cliente, usando
+  el mail-tag [email] que completó en el formulario
+- Protección anti-spam: Google reCAPTCHA v3 (invisible, sin casillero
+  "no soy un robot"), configurado en Contacto -> Integración, con las
+  claves generadas desde una cuenta de Google dedicada al negocio
+  (totalclean2026@gmail.com), NO una cuenta personal.
+
+-------------------------------------------
+8. IMÁGENES
+-------------------------------------------
+Todas las imágenes viven en assets/img/ y se referencian en el PHP así:
+<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/NOMBRE.jpg' ); ?>
+
+Importante: comprimir las fotos ANTES de subirlas (max ~300-400KB cada una,
+1600px de ancho como máximo). El logo (logo.png) es la única excepción:
+tiene que quedar en formato PNG porque tiene fondo transparente.
+
+-------------------------------------------
+9. DESPLIEGUE A PRODUCCIÓN
+-------------------------------------------
+El tema ya está instalado en el hosting real (totalclean.com.ar). Para
+subir cambios:
+- Cambios chicos (1-2 archivos): editar directo por FTP/SFTP o por el
+  Editor de archivos del wp-admin (Apariencia -> Editor de archivos del
+  tema), pisando el archivo correspondiente.
+- Cambios grandes: armar un zip nuevo de la carpeta "totalclean" y
+  reemplazarla completa por FTP, o reinstalar desde Apariencia -> Temas
+  (hay que eliminar el tema viejo primero para poder subir el zip nuevo).
+
+IMPORTANTE: antes de subir un zip, revisar que las imágenes estén
+comprimidas - un zip pesado (+10-15MB) puede superar el límite de subida
+de PHP en hostings compartidos y falla sin mostrar un error claro.
+
+-------------------------------------------
+Firma del desarrollador (footer del sitio, estilo terminal):
+btoledo@ush:~$ _
+desarrollo & infraestructura
+===========================================

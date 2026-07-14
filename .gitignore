@@ -1,0 +1,6 @@
+# Archivos del sistema
+   .DS_Store
+   Thumbs.db
+   
+   # Si en algún momento agregás node_modules (por ejemplo si sumás herramientas de build)
+   node_modules/

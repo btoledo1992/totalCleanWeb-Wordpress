@@ -177,24 +177,7 @@ get_header();
     </div>
     <button class="gallery-arrow right" onclick="scrollGallery(1)" aria-label="Siguiente">›</button>
   </div>
-</section>
-
-<section> TIRA DE PROPAGANDA
-  <div class="ticker">
-    <div class="ticker-track">
-      <span>Solicitá tu presupuesto hoy</span>
-      <span>Reservá tu servicio en minutos</span>
-      <span>Dejá la limpieza en nuestras manos</span>
-      <span>Atención rápida y personalizada</span>
-      <span>Tu espacio impecable te espera</span>
-      <span>Agendá tu limpieza ahora</span>
-      <span>Escribinos por WhatsApp</span>
-      <span>Sumate a nuestros clientes satisfechos</span>
-      <span>Contratá un servicio profesional</span>
-      <span>Atendemos Ushuaia y alrededores</span>
-    </div>
-  </div>
-</section> -->
+</section>-->
 
 <section>
   <div class="wrap">

@@ -55,10 +55,10 @@ get_header();
       <h2 class="title">La visión detrás de cada logro</h2>
     </div>
     <div class="team-grid">
-      <div class="team-card"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/martin.png' ); ?>" alt="Coordinadora general"><div class="team-info"><h4>Martin Sebastian Rojo</h4><p>Gerencia</p></div></div>
-      <div class="team-card"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/luis.png' ); ?>" alt="Encargada de calidad"><div class="team-info"><h4>Luis Daniel Rojo</h4><p>Gerencia</p></div></div>
-      <div class="team-card"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/tincho.png' ); ?>" alt="Supervisor de campo"><div class="team-info"><h4>Marcos Martin Rojo</h4><p>Community Manager</p></div></div>
-      <div class="team-card team-card-nudge"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/ema.png' ); ?>" alt="Atención al cliente"><div class="team-info"><h4>Blas Emanuel Toledo</h4><p>Sistemas</p></div></div>
+      <div class="team-card"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/martin.png' ); ?>" alt="Coordinadora general"><div class="team-info"><h4>Martin</h4><p>Gerencia</p></div></div>
+      <div class="team-card"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/luis.png' ); ?>" alt="Encargada de calidad"><div class="team-info"><h4>Luis</h4><p>Gerencia</p></div></div>
+      <div class="team-card"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/tincho.png' ); ?>" alt="Supervisor de campo"><div class="team-info"><h4>Marcos</h4><p>Community Manager</p></div></div>
+      <div class="team-card team-card-nudge"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/ema.png' ); ?>" alt="Atención al cliente"><div class="team-info"><h4>Blas</h4><p>Sistemas</p></div></div>
     </div>
   </div>
 </section> -->
