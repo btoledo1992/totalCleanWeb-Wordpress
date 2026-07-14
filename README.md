@@ -31,8 +31,6 @@
 
 </div>
 
-> 💡 *Reemplazá las imágenes de `/screenshots` por las tuyas — nombres esperados: `inicio-desktop.png`, `inicio-mobile.png`, `servicios-desktop.png`.*
-
 ---
 
 ## ✨ Sobre el proyecto
