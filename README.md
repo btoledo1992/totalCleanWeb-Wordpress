@@ -20,13 +20,14 @@
 
 **Inicio — Desktop**
 <br>
-<img src="./screenshots/inicio-desktop.png" width="850" alt="Página de inicio en desktop">
+<img width="1581" height="678" alt="image" src="https://github.com/user-attachments/assets/4cf4a89a-2fc9-4e6f-a69c-1092344e0ce4" />
+
 
 <br><br>
 
 | Mobile | Servicios |
 |:---:|:---:|
-| <img src="./screenshots/inicio-mobile.png" width="280" alt="Vista mobile"> | <img src="./screenshots/servicios-desktop.png" width="500" alt="Página de servicios"> |
+| <img width="286" height="493" alt="image" src="https://github.com/user-attachments/assets/e3dde9d7-b0de-4302-8dff-0d3227d11743" /> | <img width="1578" height="732" alt="image" src="https://github.com/user-attachments/assets/f9ac8f1e-2d21-4ede-880b-153a5cc866ec" /> |
 
 </div>
 
@@ -142,14 +143,6 @@ Guía completa y detallada en [`DOCUMENTACION.txt`](./DOCUMENTACION.txt).
 El formulario funciona con **Contact Form 7**, con dos plantillas de correo (notificación interna + autorespondedor al cliente) y protección anti-spam mediante **Google reCAPTCHA v3**, invisible para el usuario.
 
 > 🔒 Ninguna credencial, API key o dato sensible está hardcodeado en el código — toda la configuración vive en la base de datos de WordPress, gestionada desde el panel de administración.
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Botón flotante de WhatsApp
-- [ ] Sección de testimonios/reseñas reales
-- [ ] Integración con Google Business Profile / Analytics
 
 ---
 
